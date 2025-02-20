@@ -1,0 +1,159 @@
+.MyNotesMain {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-light-notesArea);
+
+    position: relative;
+
+    flex: 4;
+    /* border: 1px solid green; */
+}
+
+.MyNotesMain .MyNotesWrapper {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+/*& --------------- HEADER --------------- */
+
+.MyNotesMain .MyNotesWrapper .MyNotesHeader {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-md);
+    /* min-height: 98px;
+    max-height: 98px; */
+    /* position: absolute;
+    top: 0px;
+    left: 0px; */
+    background-color: var(--bg-blue-1);
+}
+
+
+.MyNotesMain .MyNotesWrapper .MyNotesHeader .MyNotesHeader_Body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.MyNotesMain .MyNotesWrapper .MyNotesHeader .MyNotesHeader_Body .grpInitials {
+    width:68.8px;
+    height:68.9px;
+    border-radius: 50%;
+    color: var(--font-light);
+    background-color: var(--bg-initials);
+
+    font-weight: 500;
+    font-size: 24.12px;
+    letter-spacing: 1px;
+    line-height: 1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MyNotesMain .MyNotesWrapper .MyNotesHeader .MyNotesHeader_Body .grpName {
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: var(--font-light);
+    margin: 0px 0px 0px var(--spacing-md);
+}
+
+
+/*& --------------- Notes Area --------------- */
+
+.MyNotesMain .MyNotesWrapper .MyNotesArea{
+    flex: 1;
+    overflow-y: scroll;
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg)  0px var(--spacing-lg) ;
+
+    border: 2px solid red;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-scrollbarArea-2);
+    border-radius: 5.5px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-scrollbar-1);
+    border-radius: 5.5px;
+
+}
+
+
+
+.MyNotesMain .MyNotesWrapper .MyNotesArea .MyNotesAreaBody {
+    width: 100%;
+    /* border: 1px solid green; */
+}
+
+
+
+
+
+
+/*& --------------- FOOTER --------------- */
+
+.MyNotesMain .MyNotesWrapper .footerMain {
+    width:100%;
+    
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.MyNotesMain .MyNotesWrapper .MyNotesHeader_Footer {
+    width: 100%;
+    /* border: 1px solid green; */
+    padding: var(--spacing-md) var(--spacing-md);
+    background-color: var(--bg-blue-1);
+
+    position: relative;
+
+    bottom: 0px;
+    left: 0px;
+}
+
+.MyNotesMain .MyNotesWrapper .MyNotesHeader_Footer > textarea {
+    width: 100%;
+    min-height: 211px;
+    border-radius: 9px;
+    border: none;
+    outline: none;
+    padding: var(--spacing-md);
+
+    /* Ensures the textarea does not expand or shrink */
+    resize: none;
+
+    font-weight: 500;
+    font-size: 29.82px;
+    letter-spacing: 1px;
+    color: var(--text-AddMsgPlaceholder);
+}
+
+.MyNotesMain .MyNotesWrapper .MyNotesHeader_Footer > textarea::placeholder {
+    font-weight: 500;
+    font-size: 29.82px;
+    letter-spacing: 2px;
+    color: var(--text-AddMsgPlaceholder);
+}
+
+.MyNotesMain .MyNotesWrapper .MyNotesHeader_Footer .sendIcon {
+    position: absolute;
+    bottom: calc(var(--spacing-md) * 2);
+    right: calc(var(--spacing-md) * 2);
+    cursor: pointer;
+}

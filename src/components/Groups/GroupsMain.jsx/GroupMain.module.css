@@ -1,0 +1,85 @@
+.GroupsMain {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid rgb(180, 255, 40); */
+    position: relative;
+
+    flex: 1;
+}
+
+.GroupsMain .GroupsWrapper {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid blue; */
+    padding: calc(var(--spacing-lg) * 2 + var(--spacing-sm)) 0px 0px 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.GroupsMain .GroupsWrapper .groupsBody {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.GroupsMain .GroupsWrapper .groupsBody .title {
+    font-weight: 500;
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+.GroupsMain .GroupsWrapper .groupsBody .groupsContainer {
+    width: 100%;
+    height: 100%;
+    margin: calc(var(--spacing-lg) * 2) 0px 0px 0px;
+    /* border: 1px solid black; */
+
+    overflow-y: scroll;
+}
+
+
+
+.GroupsMain .GroupsWrapper .groupsBody .groupsContainer::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+.GroupsMain .GroupsWrapper .groupsBody .groupsContainer::-webkit-scrollbar-track {
+    background: var(--bg-scrollbarArea-1);
+    border-radius: 5.5px;
+}
+
+
+.GroupsMain .GroupsWrapper .groupsBody .groupsContainer::-webkit-scrollbar-thumb {
+    background: var(--bg-scrollbar-1);
+    border-radius: 5.5px;
+
+}
+
+.GroupsMain .addGroupBtn {
+    width: 93px;
+    height: 93px;
+    background-color: var(--bg-addBtn);
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    position: absolute;
+    right: calc(var(--spacing-md) * 2);
+    bottom: calc(var(--spacing-md) * 2);
+}
+
+
+.GroupsMain .GroupsWrapper>img {
+    width: 39px;
+    height: 63px;
+}

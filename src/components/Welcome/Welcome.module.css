@@ -1,0 +1,85 @@
+.WelcomeMain {
+    width:100%;
+    height: 100%;
+    background-color: var(--bg-light-notesArea);
+    position: relative;
+    
+    flex:4;
+    /* border: 1px solid green; */
+}
+
+.WelcomeMain .welcomeWrapper {
+    width:100%;
+    height: 100%;
+    /* border: 1px solid violet; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.WelcomeMain .welcomeWrapper .LogoDiv {
+    width:626px;
+    height: 313px;
+}
+
+.WelcomeMain .welcomeWrapper .LogoDiv > .logo {
+    width: 100%;
+    height: 100%;
+}
+
+
+.WelcomeMain .welcomeInfo {
+    margin: var(--spacing-lg) 0px 0px 0px;
+    text-align: center;
+}
+
+.WelcomeMain .welcomeInfo  .about {
+    margin: var(--spacing-md) 0px 0px 0px;
+
+    width: 100%;
+    /* border: 1px solid blue; */
+}
+
+.WelcomeMain .welcomeInfo .title {
+    color: var(--text-primary);
+    font-weight: 800;
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+.WelcomeMain .welcomeInfo .about > p {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+
+
+
+.WelcomeMain .encryption {
+    position: absolute;
+    bottom: var(--spacing-md);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.WelcomeMain .encryption  > .encryptionLock {
+    width: 17px;
+    height: 21px;
+}
+
+.WelcomeMain .encryption  > .encryptionLock > img {
+    width: 100%;
+    height: 100%;
+}
+
+.WelcomeMain .encryption > span {
+    padding: 6px 0px 0px var(--spacing-sm);
+}

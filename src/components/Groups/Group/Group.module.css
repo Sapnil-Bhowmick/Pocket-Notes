@@ -1,0 +1,45 @@
+
+.singleGroupMain {
+    width:100%;
+    /* border: 1px solid rgb(68, 36, 182); */
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.singleGroupMain:hover {
+    background-color: var(--hover-1);
+}
+
+.singleGroupMain .singleGroupWrapper {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm)  var(--spacing-lg);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.singleGroupMain .singleGroupWrapper > .initials {
+    background-color: var(--bg-initials);
+    width: 68.9px;
+    height: 68.9px;
+    border-radius: 50%;
+    color: var(--font-light);
+
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 1px;
+    line-height: 1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.singleGroupMain .singleGroupWrapper > .name {
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 24px;
+    color: var(--text-primary);
+    margin: 0px 0px 0px var(--spacing-md);
+}

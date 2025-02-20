@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: var(--body-font);
+}
+
+
+:root {
+
+  /* Backgrounds */
+  --bg-light-notesArea: #DAE5F5;
+  --bg-light-groupArea: #fff;
+  --bg-dark-popUp: #c2c2c2;
+
+  --bg-blue-1: #001F8B;
+
+  /* Buttons */
+  --bg-addBtn: #16008B;
+  --plus-addBtn: #fff;
+
+  --bg-createGrp: #001F8B;
+  --label-createGrp: #fff;
+
+  /* SVG */
+  --svg-color-1: #ABABAB;
+  --svg-color-2: #001F8B;
+  --svg-color-3: #292929;
+
+  /* Notes */
+  --bg-initials: #0047FF;
+
+
+  /* Spacings */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+
+
+  /* Font Color */
+  --text-primary: #000000;
+  --text-secondary: #292929;
+  --font-light: #fff;
+
+  --text-dateTime: #353535;
+  
+  --text-AddMsgPlaceholder: #9A9A9A;
+  --text-addGrpPlaceholder: #979797;
+
+  /* Font Family */
+  --body-font: "Roboto", serif;
+
+  /* ScrollBar */
+  --bg-scrollbarArea-1: #D9D9D9;
+  --bg-scrollbarArea-2: #000000;
+
+  --bg-scrollbar-1: #fff;
+
+  /* Hover */
+  --hover-1: #d3d3d3;
+
+  /* Box Shadow */
+  --boxShadow-note: 0px 2px 10px rgb(180, 178, 178);
+
+}
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,44 @@
+
+.NoteMain {
+    width: 100%;
+    background-color: var(--bg-light-groupArea);
+    color: var(--text-primary);
+    box-shadow: var(--boxShadow-note);
+    border-radius: 5px;
+    margin: var(--spacing-md) 0px;
+
+    position: relative;
+
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-xl) var(--spacing-md);
+
+}
+
+.NoteMain .NoteWrapper > p {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    border: 1px solid black;
+}
+
+.NoteMain .NoteWrapper .NoteTime {
+    position: absolute;
+    bottom: var(--spacing-sm);
+    right: var(--spacing-md);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.NoteMain .NoteWrapper .NoteTime .Bullet {
+    padding: 0px var(--spacing-md);
+}
+
+.NoteMain .NoteWrapper .NoteTime > span {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: var(--text-dateTime);
+}
