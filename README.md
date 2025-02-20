@@ -1,14 +1,14 @@
 # Pocket Notes
- - Sidebar
-  - Title
-  - GroupsMain
-   - Group
+  - Sidebar
+    - Title
+    - GroupsMain
+      - Group
 
  - NotesArea
-  - Header
-  - Body
-    - Note
-  - Footer
+   - Header
+   - Body
+     - Note
+   - Footer
  
  - Welcome
    - Logo
