@@ -3,7 +3,7 @@ import styles from "./GroupMain.module.css"
 
 import Add from "../../../assets/Images/add.svg"
 
-const GroupMain = () => {
+const GroupMain = ({setIsOpenModal}) => {
   return (
     <section className={styles.GroupsMain}>
       <div className={styles.GroupsWrapper}>
@@ -17,7 +17,7 @@ const GroupMain = () => {
         </div>
       </div>
 
-      <button className={styles.addGroupBtn}>
+      <button className={styles.addGroupBtn} onClick={() => setIsOpenModal((prev) => !prev)}>
           <img src={Add} alt="Add" />
       </button>
     </section>

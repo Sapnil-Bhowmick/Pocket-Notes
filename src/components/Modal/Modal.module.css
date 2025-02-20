@@ -1,0 +1,139 @@
+
+.modalMain{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-Inactive-modal);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modalMain .NewGroupDiv {
+    min-width: 740px;
+    min-height: 317px;
+    background-color: var(--bg-modal);
+    border-radius: 5px;
+
+    padding: var(--spacing-lg);
+
+    position: relative;
+}
+
+
+.modalMain .NewGroupDiv .NewGroupDivWrapper {
+    width: 100% ;
+    height: 100%;
+}
+
+
+.modalMain .NewGroupDiv .NewGroupDivWrapper > .modalTitle {
+    font-weight: 500;
+    font-size: 29px;
+    letter-spacing: 2px;
+}
+
+
+.modalMain .NewGroupDiv .NewGroupDivWrapper > .modalInputDiv {
+    margin: var(--spacing-md) 0px var(--spacing-lg) 0px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.modalMain .NewGroupDiv .NewGroupDivWrapper > .modalInputDiv > span {
+    font-weight: 500;
+    font-size: 27.31px;
+    letter-spacing: 2px;
+    margin: 0px var(--spacing-lg) 0px 0px;
+}
+
+.modalMain .NewGroupDiv .NewGroupDivWrapper > .modalInputDiv > input {
+    flex:1;
+
+    outline: none;
+    border: 2px solid #cccccc;
+    border-radius: 22px;
+    padding: 0px var(--spacing-md);
+
+    width: 100%;
+    min-height: 51px;
+
+    font-weight: 500;
+    font-size: 23px;
+    letter-spacing: 2px;
+    color: var(--text-addGrpPlaceholder)
+}
+
+.modalMain .NewGroupDiv .NewGroupDivWrapper > .modalInputDiv > input::placeholder {
+    color: var(--text-addGrpPlaceholder)
+}
+
+
+
+.modalMain .NewGroupDiv .NewGroupDivWrapper .modalColorDiv {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.modalMain .NewGroupDiv .NewGroupDivWrapper .modalColorDiv > span {
+    font-weight: 500;
+    font-size: 27.31px;
+    letter-spacing: 2px;
+
+    margin: 0px var(--spacing-lg) 0px 0px;
+}
+
+
+.modalMain .NewGroupDiv .NewGroupDivWrapper .modalColorDiv > .colorContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.modalMain .NewGroupDiv .NewGroupDivWrapper .modalColorDiv > .colorContainer > .color {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    margin: 0px var(--spacing-md) 0px 0px ;
+    cursor: pointer;
+}
+
+
+.modalMain .NewGroupDiv .createBtn {
+    border:none;
+    min-width: 154px;
+    height: 38px;
+    border-radius: 11px;
+    background-color: var(--bg-createGrp);
+
+    color: var(--font-light);
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: var(--spacing-lg);
+    bottom: var(--spacing-md);
+
+    cursor: pointer;
+
+    transition: color 0.2s ease-in-out;
+}
+
+.modalMain .NewGroupDiv .createBtn:hover {
+    color: rgb(207, 206, 206);
+}

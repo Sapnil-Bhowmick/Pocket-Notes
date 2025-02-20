@@ -19,6 +19,9 @@
 
   --bg-blue-1: #001F8B;
 
+  --bg-Inactive-modal: rgba(70, 69, 69, 0.7);
+  --bg-modal: #fff;
+
   /* Buttons */
   --bg-addBtn: #16008B;
   --plus-addBtn: #fff;

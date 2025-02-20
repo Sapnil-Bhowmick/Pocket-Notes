@@ -76,10 +76,16 @@
     position: absolute;
     right: calc(var(--spacing-md) * 2);
     bottom: calc(var(--spacing-md) * 2);
+
+    transition: transform 0.3s ease-in-out;
 }
 
+.GroupsMain .addGroupBtn:hover {
+    transform: scale(1.1)
+}
 
 .GroupsMain .GroupsWrapper>img {
     width: 39px;
     height: 63px;
 }
+
