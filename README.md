@@ -9,6 +9,7 @@
    - Body
      - Note
    - Footer
+     - TextArea
  
  - Welcome
    - Logo
