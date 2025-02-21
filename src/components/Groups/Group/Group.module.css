@@ -20,6 +20,7 @@
 }
 
 .singleGroupMain .singleGroupWrapper > .initials {
+    text-transform: uppercase;
     background-color: var(--bg-initials);
     width: 68.9px;
     height: 68.9px;

@@ -16,8 +16,8 @@ const HomePage = () => {
     <div className={styles.HomeMain}>
       <div className={styles.HomeWrapper}>
         <GroupMain setIsOpenModal={setIsOpenModal} />
-        {/* <Welcome/> */}
-        <MyNotes />
+        <Welcome/>
+        {/* <MyNotes /> */}
 
         {isOpenModal && <Modal setIsOpenModal={setIsOpenModal} />}
       </div>

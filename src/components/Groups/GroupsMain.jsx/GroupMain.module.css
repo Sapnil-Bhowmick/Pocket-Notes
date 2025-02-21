@@ -43,7 +43,7 @@
     margin: calc(var(--spacing-lg) * 2) 0px 0px 0px;
     /* border: 1px solid black; */
 
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 
