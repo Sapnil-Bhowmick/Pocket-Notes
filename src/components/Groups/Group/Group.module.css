@@ -48,7 +48,10 @@
 
 
 
-/* Media Query */
+
+/* &----------------------------- Media Queries ----------------------------- */
+
+
 
 @media screen and (max-width: 970px) {
      .singleGroupMain .singleGroupWrapper > .initials {

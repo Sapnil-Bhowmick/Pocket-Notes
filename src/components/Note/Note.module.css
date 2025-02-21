@@ -18,7 +18,7 @@
     font-size: 18px;
     letter-spacing: 2px;
     line-height: 30px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .NoteMain .NoteWrapper .NoteTime {
@@ -42,6 +42,13 @@
     letter-spacing: 2px;
     color: var(--text-dateTime);
 }
+
+
+
+
+
+
+/* &----------------------------- Media Queries ----------------------------- */
 
 
 

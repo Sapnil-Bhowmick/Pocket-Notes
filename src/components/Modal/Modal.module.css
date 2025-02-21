@@ -1,5 +1,4 @@
-
-.modalMain{
+.modalMain {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -26,19 +25,19 @@
 
 
 .modalMain .NewGroupDiv .NewGroupDivWrapper {
-    width: 100% ;
+    width: 100%;
     height: 100%;
 }
 
 
-.modalMain .NewGroupDiv .NewGroupDivWrapper > .modalTitle {
+.modalMain .NewGroupDiv .NewGroupDivWrapper>.modalTitle {
     font-weight: 500;
     font-size: 29px;
     letter-spacing: 2px;
 }
 
 
-.modalMain .NewGroupDiv .NewGroupDivWrapper > .modalInputDiv {
+.modalMain .NewGroupDiv .NewGroupDivWrapper>.modalInputDiv {
     margin: var(--spacing-md) 0px var(--spacing-lg) 0px;
 
     display: flex;
@@ -46,15 +45,15 @@
     align-items: center;
 }
 
-.modalMain .NewGroupDiv .NewGroupDivWrapper > .modalInputDiv > span {
+.modalMain .NewGroupDiv .NewGroupDivWrapper>.modalInputDiv>span {
     font-weight: 500;
     font-size: 27.31px;
     letter-spacing: 2px;
     margin: 0px var(--spacing-lg) 0px 0px;
 }
 
-.modalMain .NewGroupDiv .NewGroupDivWrapper > .modalInputDiv > input {
-    flex:1;
+.modalMain .NewGroupDiv .NewGroupDivWrapper>.modalInputDiv>input {
+    flex: 1;
 
     outline: none;
     border: 2px solid #cccccc;
@@ -70,7 +69,7 @@
     color: var(--text-addGrpPlaceholder)
 }
 
-.modalMain .NewGroupDiv .NewGroupDivWrapper > .modalInputDiv > input::placeholder {
+.modalMain .NewGroupDiv .NewGroupDivWrapper>.modalInputDiv>input::placeholder {
     color: var(--text-addGrpPlaceholder)
 }
 
@@ -83,7 +82,7 @@
 }
 
 
-.modalMain .NewGroupDiv .NewGroupDivWrapper .modalColorDiv > span {
+.modalMain .NewGroupDiv .NewGroupDivWrapper .modalColorDiv>span {
     font-weight: 500;
     font-size: 27.31px;
     letter-spacing: 2px;
@@ -92,25 +91,25 @@
 }
 
 
-.modalMain .NewGroupDiv .NewGroupDivWrapper .modalColorDiv > .colorContainer {
+.modalMain .NewGroupDiv .NewGroupDivWrapper .modalColorDiv>.colorContainer {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
 
-.modalMain .NewGroupDiv .NewGroupDivWrapper .modalColorDiv > .colorContainer > .color {
+.modalMain .NewGroupDiv .NewGroupDivWrapper .modalColorDiv>.colorContainer>.color {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 
-    margin: 0px var(--spacing-md) 0px 0px ;
+    margin: 0px var(--spacing-md) 0px 0px;
     cursor: pointer;
 }
 
 
 .modalMain .NewGroupDiv .createBtn {
-    border:none;
+    border: none;
     min-width: 154px;
     height: 38px;
     border-radius: 11px;
@@ -136,4 +135,70 @@
 
 .modalMain .NewGroupDiv .createBtn:hover {
     color: rgb(207, 206, 206);
+}
+
+
+
+
+
+@media screen and (max-width: 950px) {
+    .modalMain .NewGroupDiv {
+        min-width: 284px;
+        min-height: 290px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 650px) {
+    .modalMain .NewGroupDiv {
+        min-width: 150px;
+        min-height: 240px;
+    }
+
+    .modalMain .NewGroupDiv .NewGroupDivWrapper>.modalTitle {
+        font-size: 18.4px;
+    }
+
+    .modalMain .NewGroupDiv .NewGroupDivWrapper>.modalInputDiv>span {
+        font-size: 14.6px;
+    }
+
+    .modalMain .NewGroupDiv .NewGroupDivWrapper .modalColorDiv>span {
+        font-size: 14.6px;
+    }
+
+    .modalMain .NewGroupDiv .NewGroupDivWrapper .modalColorDiv>.colorContainer>.color {
+        width: 17.67px;
+        height: 17.67px;
+    }
+
+    .modalMain .NewGroupDiv .NewGroupDivWrapper>.modalInputDiv>input {
+        min-height: 23px;
+        font-size: 10px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .modalMain .NewGroupDiv .createBtn {
+        min-width: 186px;
+        height: 32px;
+        font-size: 17px;
+
+        position: absolute;
+        right: calc(50% - 93px);
+        bottom: var(--spacing-md);
+    }
+
+}
+
+
+@media screen and (max-width: 440px) {
+    .modalMain .NewGroupDiv .NewGroupDivWrapper {
+        width: 284px;
+        height: 211px;
+    }
+    
 }
