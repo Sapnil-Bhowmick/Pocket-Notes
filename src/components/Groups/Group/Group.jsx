@@ -5,7 +5,7 @@ import { groupInitials } from "../../../utils/groupInitials"
 import styles from "./Group.module.css"
 
 
-const Group = ({data , grpId}) => {
+const Group = ({data , grpId , setShowMyNotes}) => {
 
   const dispatch = useDispatch()
 
@@ -23,6 +23,11 @@ const Group = ({data , grpId}) => {
     dispatch(addActiveGroup({
       data: activeGroupdata
     }))
+
+    if(window.innerWidth < 600){
+      console.log("< 600px")
+      setShowMyNotes(true)
+    }
   }
 
   return (

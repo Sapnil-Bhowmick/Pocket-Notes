@@ -14,12 +14,20 @@ const HomePage = () => {
   const activeGroup = useSelector((store) => store.GROUP.activeGroup)
   const [isOpenModal, setIsOpenModal] = useState(false)
 
+  const [showMyNotes, setShowMyNotes] = useState(false)
+
+  console.log("showMyNotes" , showMyNotes)
+
   return (
     <div className={styles.HomeMain}>
       <div className={styles.HomeWrapper}>
-        <GroupMain setIsOpenModal={setIsOpenModal} />
+        <GroupMain
+          setIsOpenModal={setIsOpenModal}
+          showMyNotes={showMyNotes}
+          setShowMyNotes={setShowMyNotes}
+        />
         {
-          activeGroup ? <MyNotes /> : <Welcome />
+          activeGroup ? <MyNotes showMyNotes={showMyNotes} setShowMyNotes={setShowMyNotes} /> : <Welcome />
         }
 
         {isOpenModal && <Modal setIsOpenModal={setIsOpenModal} />}

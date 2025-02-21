@@ -44,3 +44,48 @@
     color: var(--text-primary);
     margin: 0px 0px 0px var(--spacing-md);
 }
+
+
+
+
+/* Media Query */
+
+@media screen and (max-width: 970px) {
+     .singleGroupMain .singleGroupWrapper > .initials {
+        width: 62.01px;
+        height: 62.01px;
+    } 
+
+     .singleGroupMain .singleGroupWrapper > .name {
+        font-size: 18.6px;
+    }  
+}
+
+
+@media screen and (max-width: 650px) {
+    .singleGroupMain .singleGroupWrapper {
+        padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm)  var(--spacing-md);
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .singleGroupMain  {
+        width: 50%;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) { 
+    .singleGroupMain  {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) { 
+    .singleGroupMain  {
+        width: 100%;
+    }
+}

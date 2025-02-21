@@ -7,7 +7,15 @@
   -moz-osx-font-smoothing: grayscale;
 
   font-family: var(--body-font);
+
+
 }
+
+/* html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+} */
 
 
 :root {
@@ -51,7 +59,7 @@
   --font-light: #fff;
 
   --text-dateTime: #353535;
-  
+
   --text-AddMsgPlaceholder: #9A9A9A;
   --text-addGrpPlaceholder: #979797;
 

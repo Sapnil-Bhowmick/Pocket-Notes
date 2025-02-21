@@ -42,3 +42,22 @@
     letter-spacing: 2px;
     color: var(--text-dateTime);
 }
+
+
+
+@media screen and (max-width: 970px){
+    .NoteMain .NoteWrapper > p {
+        font-size: 15px;
+    }
+
+    .NoteMain .NoteWrapper .NoteTime > span {
+        font-size: 13.59px;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .NoteMain .NoteWrapper > p {
+        font-size: 13px;
+    }
+}

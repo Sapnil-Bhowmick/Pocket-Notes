@@ -2,6 +2,7 @@ import styles from "./MyNotes.module.css"
 
 import InactiveSend from "../../assets/Images/InactiveSend.svg"
 import ActiveSend from "../../assets/Images/ActiveSend.svg"
+import Back from "../../assets/Images/Back.svg"
 
 import Note from "../Note/Note"
 import { useDispatch, useSelector } from "react-redux"
@@ -10,7 +11,7 @@ import { useState } from "react"
 import { addMessage } from "../../redux/Slices/GroupSlice"
 
 
-const MyNotes = () => {
+const MyNotes = ({ showMyNotes , setShowMyNotes}) => {
 
   const dispatch = useDispatch()
 
@@ -35,11 +36,17 @@ const MyNotes = () => {
 
 
   return (
-    <section className={styles.MyNotesMain}>
+    <section
+      className={styles.MyNotesMain}
+      style={{
+       display: window.innerWidth < 600 && (showMyNotes ? "block" : "none")
+      }}
+    >
       <div className={styles.MyNotesWrapper}>
 
         <div className={styles.MyNotesHeader}>
           <div className={styles.MyNotesHeader_Body}>
+            <img src={Back} alt="Back" className={styles.back} onClick={() => setShowMyNotes(false)} />
             <div className={styles.grpInitials} style={{ backgroundColor: color && color }}>{name && groupInitials(name)}</div>
             <span className={styles.grpName}>{name.length > 30 ? name.substring(0, 30) + "..." : name}</span>
           </div>
