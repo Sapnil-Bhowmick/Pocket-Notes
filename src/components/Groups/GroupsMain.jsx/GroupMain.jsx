@@ -17,7 +17,7 @@ const GroupMain = ({ setIsOpenModal }) => {
           <div className={styles.groupsContainer}>
             {
               groups?.length !== 0 ?
-                groups.map((groupData) => <Group key={groupData.id} data={groupData} />)
+                groups.map((groupData) => <Group key={groupData.id} data={groupData} grpId = {groupData.id} />)
                 :
                 null
             }

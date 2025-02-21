@@ -7,17 +7,20 @@ import Welcome from "../../components/Welcome/Welcome"
 
 
 import styles from "./HomePage.module.css"
+import { useSelector } from "react-redux"
 
 const HomePage = () => {
 
-    const [isOpenModal , setIsOpenModal] = useState(false)
+  const activeGroup = useSelector((store) => store.GROUP.activeGroup)
+  const [isOpenModal, setIsOpenModal] = useState(false)
 
   return (
     <div className={styles.HomeMain}>
       <div className={styles.HomeWrapper}>
         <GroupMain setIsOpenModal={setIsOpenModal} />
-        <Welcome/>
-        {/* <MyNotes /> */}
+        {
+          activeGroup ? <MyNotes /> : <Welcome />
+        }
 
         {isOpenModal && <Modal setIsOpenModal={setIsOpenModal} />}
       </div>

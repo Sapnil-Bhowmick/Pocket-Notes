@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    groups: []
+    groups: [] ,
+    activeGroup: null
 }
 
 const groupSlice = createSlice({
@@ -56,6 +57,15 @@ const groupSlice = createSlice({
 
         } ,
 
+        addActiveGroup: (state , action) => {
+            const {activeGroupId , groupName , colorPreference} = action.payload.data
+            state.activeGroup = {
+                id: activeGroupId,
+                name: groupName,
+                color: colorPreference
+            }
+        }
+
     }
 })
 
@@ -69,7 +79,7 @@ const groupSlice = createSlice({
 
 //     groupMessages: [
 //         {
-//          id -> msgID
+//          id -> grpID
 //          message: ,
 //          dateTime:
 //      }
@@ -78,6 +88,11 @@ const groupSlice = createSlice({
 // }
 
 
+// activeGroup: {
+//     activeGroupId ,
+//     name ,
+//     color
+// }
 
-export const {addGroup ,addMessage} = groupSlice.actions
+export const {addGroup ,addMessage ,addActiveGroup} = groupSlice.actions
 export default groupSlice.reducer

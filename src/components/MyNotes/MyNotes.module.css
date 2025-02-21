@@ -41,6 +41,7 @@
 }
 
 .MyNotesMain .MyNotesWrapper .MyNotesHeader .MyNotesHeader_Body .grpInitials {
+    text-transform: uppercase;
     width:68.8px;
     height:68.9px;
     border-radius: 50%;
@@ -156,4 +157,5 @@
     bottom: calc(var(--spacing-md) * 2);
     right: calc(var(--spacing-md) * 2);
     cursor: pointer;
+    fill: red
 }
