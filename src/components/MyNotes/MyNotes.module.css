@@ -71,9 +71,9 @@
 
 .MyNotesMain .MyNotesWrapper .MyNotesArea{
     flex: 1;
-    overflow-y: scroll;
+    overflow-y: auto;
     width: 100%;
-    padding: var(--spacing-md) var(--spacing-lg)  0px var(--spacing-lg) ;
+    padding: var(--spacing-md) var(--spacing-lg)  247px var(--spacing-lg) ;
 
     /* border: 2px solid red; */
 }
@@ -85,6 +85,7 @@
 ::-webkit-scrollbar-track {
     background: var(--bg-scrollbarArea-2);
     border-radius: 5.5px;
+    margin-bottom: 247px;
 }
 
 
