@@ -11,7 +11,8 @@ import { useSelector } from "react-redux"
 
 const HomePage = () => {
 
-  const activeGroup = useSelector((store) => store.GROUP.activeGroup)
+  const activeGroup = useSelector((store) => store.GROUP?.activeGroup)
+  console.log("activeGrp" , activeGroup)
   const [isOpenModal, setIsOpenModal] = useState(false)
 
   const [showMyNotes, setShowMyNotes] = useState(false)
