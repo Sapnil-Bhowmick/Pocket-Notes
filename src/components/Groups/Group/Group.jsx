@@ -1,13 +1,16 @@
 
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { addActiveGroup } from "../../../redux/Slices/GroupSlice"
 import { groupInitials } from "../../../utils/groupInitials"
 import styles from "./Group.module.css"
 
 
-const Group = ({data , grpId , setShowMyNotes}) => {
+const Group = ({ data, grpId, setShowMyNotes }) => {
 
   const dispatch = useDispatch()
+  const activeGroup = useSelector((store) => store.GROUP.activeGroup)
+
+  const isGroupActive = activeGroup.id === grpId
 
   const {
     groupInfo
@@ -15,8 +18,8 @@ const Group = ({data , grpId , setShowMyNotes}) => {
 
   const handleOpenGroup = () => {
     const activeGroupdata = {
-      activeGroupId: grpId ,
-      groupName: groupInfo?.name ,
+      activeGroupId: grpId,
+      groupName: groupInfo?.name,
       colorPreference: groupInfo?.color
     }
 
@@ -24,17 +27,23 @@ const Group = ({data , grpId , setShowMyNotes}) => {
       data: activeGroupdata
     }))
 
-    if(window.innerWidth < 600){
+    if (window.innerWidth < 600) {
       console.log("< 600px")
       setShowMyNotes(true)
     }
   }
 
   return (
-    <div className={styles.singleGroupMain} onClick={handleOpenGroup}>
+    <div
+      className={styles.singleGroupMain}
+      style={{
+        backgroundColor: isGroupActive && "var(--hover-1)"
+      }}
+      onClick={handleOpenGroup}
+    >
       <div className={styles.singleGroupWrapper}>
-            <span className={styles.initials} style={{backgroundColor: groupInfo.color}}>{groupInitials(groupInfo?.name)}</span>
-            <span className={styles.name}>{groupInfo?.name?.length > 13 ? groupInfo?.name?.substring(0 , 13) + "..." : groupInfo?.name}</span>
+        <span className={styles.initials} style={{ backgroundColor: groupInfo.color }}>{groupInitials(groupInfo?.name)}</span>
+        <span className={styles.name}>{groupInfo?.name?.length > 13 ? groupInfo?.name?.substring(0, 13) + "..." : groupInfo?.name}</span>
       </div>
     </div>
   )

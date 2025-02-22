@@ -35,6 +35,24 @@ const MyNotes = ({ showMyNotes , setShowMyNotes}) => {
   }
 
 
+  const handleKeyDown = (e) => {
+    if(message.trim().length > 0 && e.key === "Enter"){
+      e.preventDefault(); // Prevent new line in textarea
+
+      const newMessage = {
+        groupID: activeGroupId,
+        messageData: message,
+        messageCreationTime: Date.now()
+      }
+
+      dispatch(addMessage({
+        data: newMessage
+      }))
+    }
+  }
+
+
+
   return (
     <section
       className={styles.MyNotesMain}
@@ -68,6 +86,7 @@ const MyNotes = ({ showMyNotes , setShowMyNotes}) => {
             <textarea
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              onKeyDown={handleKeyDown}
               placeholder="Enter your text here..........." />
             {
               message?.trim().length !== 0 ?
