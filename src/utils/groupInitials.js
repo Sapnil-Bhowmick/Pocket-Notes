@@ -27,8 +27,8 @@ export const formatDate = (timestamp) => {
   
     const formattedTime = `${hours}:${minutes.toString().padStart(2, '0')} ${amPm}`; // Example: "10:00 pm"
 
-    console.log("date" , formattedDate)
-    console.log("time" , formattedTime)
+    // console.log("date" , formattedDate)
+    // console.log("time" , formattedTime)
   
     return { formattedDate, formattedTime };
   };
