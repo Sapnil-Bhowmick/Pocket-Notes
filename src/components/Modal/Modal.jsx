@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { colors } from "../../utils/constants"
 import styles from "./Modal.module.css"
 import { useDispatch } from "react-redux"
@@ -6,6 +6,8 @@ import { addGroup } from "../../redux/Slices/GroupSlice"
 
 
 const Modal = ({ setIsOpenModal }) => {
+
+    const targetRef = useRef()
 
     const [groupInfo, setGroupInfo] = useState({
         groupName: null,
@@ -17,7 +19,7 @@ const Modal = ({ setIsOpenModal }) => {
     const validateGroupInfo = () => {
         let isValid = true
 
-        if (!groupInfo.groupName || groupInfo?.groupName?.trim().length === 0) {
+        if (!groupInfo.groupName || groupInfo?.groupName?.trim().length < 2) {
             isValid = false
         }
 
@@ -44,11 +46,17 @@ const Modal = ({ setIsOpenModal }) => {
     }
 
 
+    const handleOutsideClick = (e) => {
+        if (targetRef.current && !targetRef.current.contains(e.target)) {
+           setIsOpenModal(false)
+        }
+    }
+
 
 
     return (
-        <form className={styles.modalMain} >
-            <div className={styles.NewGroupDiv}>
+        <form className={styles.modalMain} onMouseDown={handleOutsideClick}>
+            <div className={styles.NewGroupDiv} ref={targetRef}>
                 <div className={styles.NewGroupDivWrapper}>
                     <h3 className={styles.modalTitle}>Create New group</h3>
 
