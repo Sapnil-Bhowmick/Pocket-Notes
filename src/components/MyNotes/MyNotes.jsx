@@ -36,7 +36,7 @@ const MyNotes = ({ showMyNotes , setShowMyNotes}) => {
 
 
   const handleKeyDown = (e) => {
-    if(message.trim().length > 0 && e.key === "Enter"){
+    if(message.trim().length > 0 && e.key === "Enter" && !e.shiftKey){
       e.preventDefault(); // Prevent new line in textarea
 
       const newMessage = {

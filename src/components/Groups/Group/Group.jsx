@@ -10,7 +10,7 @@ const Group = ({ data, grpId, setShowMyNotes }) => {
   const dispatch = useDispatch()
   const activeGroup = useSelector((store) => store.GROUP.activeGroup)
 
-  const isGroupActive = activeGroup.id === grpId
+  const isGroupActive = activeGroup?.id === grpId
 
   const {
     groupInfo
